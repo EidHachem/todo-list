@@ -23,7 +23,8 @@
 
 - git clone git@github.com:EidHachem/todo-list.git
 - cd todo-list
-- open index.html file with any browser
+- Run npm i and then npm start to run the project.
+- open index.html using npm run start
 
 ## Author
 
