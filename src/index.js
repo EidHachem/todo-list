@@ -1,6 +1,10 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable arrow-body-style */
+/* eslint-disable array-callback-return */
+
 import './style/style.css';
 
-const list = document.querySelector('.todo-list');
+const list = document.querySelector('.li');
 
 const tasks = [
   {
@@ -28,6 +32,6 @@ const addTask = tasks
     const listItem = document.createElement('li');
     list.appendChild(listItem);
     listItem.innerHTML = `
-  <li><input type="checkbox" name="${task.index}" id="${task.index}">
-  <label for="${task.index}">${task.description}</label><br> </li>`;
+  <div class="input-label"><input type="checkbox" name="${task.index}" id="${task.index}">
+  <label for="${task.index}">${task.description}</label></div> <div class="icon"><i class="fa-solid fa-ellipsis-vertical"></i></div><br>`;
   });

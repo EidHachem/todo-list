@@ -4,12 +4,34 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <title><%= htmlWebpackPlugin.options.title %></title>
   </head>
   <body>
     <main>
-      <h1>Today's todo</h1>
-      <ul class="todo-list"></ul>
+      <ul class="todo-list">
+        <li>
+          <span class="todo-title">Today's todo</span>
+          <i class="fa-solid fa-arrows-rotate"></i>
+        </li>
+        <li>
+          <input
+            type="text"
+            name="add"
+            id="add"
+            placeholder="Add to your list..."
+            class="add-input"
+          />
+        </li>
+        <span class="li"></span>
+        <p><span class="clear">clear all completed</span></p>
+      </ul>
     </main>
   </body>
 </html>

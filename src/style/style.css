@@ -1,9 +1,77 @@
-* {
+:root {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+body {
+  background-color: #d3d3d3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 main {
-  margin: 0 auto;
+  padding: 1em;
+  width: 50%;
+}
+
+li {
+  list-style: none;
+  background-color: #fff;
+  border: 1px solid #e2d8d8;
+  padding: 0.5em 1em;
+  width: 35em;
+  font-size: 0.9rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-content: center;
+}
+
+.input-label,
+.todo-title {
+  width: 70em;
+}
+
+label {
+  max-width: 10em;
+}
+
+.icon {
+  margin-left: 50%;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.fa-arrows-rotate {
+  margin-left: 70%;
+}
+
+.fa-ellipsis-vertical {
+  cursor: move;
+}
+
+.add-input {
+  width: 97%;
+  border: none;
+}
+
+p {
+  margin-top: 0;
+  background-color: #ece3e3;
+  padding: 0.5em 1em;
+  border: 1px solid #e2d8d8;
+  text-align: center;
+  max-width: 35em;
+  font-size: 0.9rem;
+}
+
+.clear {
+  cursor: pointer;
+  color: #686363;
+}
+
+.clear:hover {
+  text-decoration: underline;
 }
