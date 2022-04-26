@@ -16,6 +16,15 @@ main {
   width: 50%;
 }
 
+.todo-header {
+  margin: 0;
+  padding-left: 0;
+  padding-right: 2em;
+  display: flex;
+  justify-content: flex-start;
+  text-align: start;
+}
+
 li {
   list-style: none;
   background-color: #fff;
@@ -34,22 +43,26 @@ li {
   width: 70em;
 }
 
+.todo-title {
+  margin-left: 1.5em;
+}
+
 label {
   max-width: 10em;
 }
 
 .icon {
-  margin-left: 50%;
   cursor: pointer;
   font-size: 0.9rem;
 }
 
-.fa-arrows-rotate {
-  margin-left: 70%;
-}
-
 .fa-ellipsis-vertical {
   cursor: move;
+  padding-right: 1.2em;
+}
+
+.fa-arrows-rotate {
+  cursor: pointer;
 }
 
 .add-input {
@@ -57,9 +70,10 @@ label {
   border: none;
 }
 
-p {
+p,
+form {
   margin-top: 0;
-  background-color: #ece3e3;
+  background-color: #fff;
   padding: 0.5em 1em;
   border: 1px solid #e2d8d8;
   text-align: center;
@@ -70,6 +84,7 @@ p {
 .clear {
   cursor: pointer;
   color: #686363;
+  height: 4em;
 }
 
 .clear:hover {
