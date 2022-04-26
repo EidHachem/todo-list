@@ -1,0 +1,17 @@
+@font-face {
+  font-family: 'MyFont';
+
+  src: url('./cocogoose_trial.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+}
+
+.hello {
+  color: red;
+  font-family: 'cocogoose';
+  background: url('./congrats-celebration.gif');
+}
+
+body {
+  background-color: red;
+}
