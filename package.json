@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch": "webpack --watch",
-    "start": "webpack serve --open",
+    "start": "webpack serve",
     "server": "node server.js",
     "build": "webpack"
   },
@@ -14,8 +14,13 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@fortawesome/fontawesome-free": "^6.1.1",
+    "babel-eslint": "^10.1.0",
     "css-loader": "^6.7.1",
     "csv-loader": "^3.0.3",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.26.0",
     "express": "^4.18.0",
     "html-webpack-plugin": "^5.5.0",
     "json5": "^2.2.1",
@@ -31,10 +36,10 @@
   "main": "server.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/EidHachem/webpack-template.git"
+    "url": "git+https://github.com/EidHachem/todo-list.git"
   },
   "bugs": {
-    "url": "https://github.com/EidHachem/webpack-template/issues"
+    "url": "https://github.com/EidHachem/todo-list/issues"
   },
-  "homepage": "https://github.com/EidHachem/webpack-template#readme"
+  "homepage": "https://github.com/EidHachem/todo-list#readme"
 }
