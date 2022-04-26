@@ -5,13 +5,25 @@ const yaml = require('yamljs');
 const json5 = require('json5');
 
 module.exports = {
-  entry: './src/index.js',
+  mode: 'development',
+  entry: {
+    path: path.resolve(__dirname, './src/index.js'),
+  },
   devServer: {
-    static: './dist',
+    static: {
+      directory: path.resolve(__dirname, 'dist'),
+    },
+    port: 3000,
+    open: true,
+    hot: true,
+    compress: true,
+    historyApiFallback: true,
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './src/index.html',
+      title: 'Todo list',
+      filename: 'index.html',
+      template: './src/main.html',
     }),
   ],
   output: {

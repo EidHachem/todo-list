@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch": "webpack --watch",
-    "start": "webpack serve --open",
+    "start": "webpack serve",
     "server": "node server.js",
     "build": "webpack"
   },
@@ -31,10 +31,10 @@
   "main": "server.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/EidHachem/webpack-template.git"
+    "url": "git+https://github.com/EidHachem/todo-list.git"
   },
   "bugs": {
-    "url": "https://github.com/EidHachem/webpack-template/issues"
+    "url": "https://github.com/EidHachem/todo-list/issues"
   },
-  "homepage": "https://github.com/EidHachem/webpack-template#readme"
+  "homepage": "https://github.com/EidHachem/todo-list#readme"
 }
