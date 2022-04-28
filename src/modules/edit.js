@@ -2,6 +2,9 @@
 /* eslint-disable import/no-mutable-exports */
 /* eslint-disable no-else-return */
 /* eslint-disable no-useless-return */
+/* eslint-disable array-callback-return */
+/* eslint-disable consistent-return */
+/* eslint-disable arrow-body-style */
 
 let x = JSON.parse(localStorage.getItem('savedData'));
 export let tasks = [];
