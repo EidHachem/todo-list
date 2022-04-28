@@ -23,13 +23,16 @@ export default function edit(e) {
     const removeTaskFromArray = item.parentElement.previousElementSibling.children[0].getAttribute('name');
 
     tasks = tasks
-      .sort((a, b) => {
-        return a.index - b.index;
-      })
       .filter((newTask) => {
         if (newTask.index !== +removeTaskFromArray) {
           return true;
         }
+      })
+      .sort((a, b) => {
+        if (a.index !== 1) {
+          a.index = 1;
+        }
+        return a.index - b.index;
       })
       .sort((task, newTask) => {
         if (task.index + 1 === newTask.index) {
@@ -40,6 +43,7 @@ export default function edit(e) {
       });
 
     localStorage.setItem('savedData', JSON.stringify(tasks));
+    console.log(tasks);
   }
 
   if (item.classList.contains('fa-ellipsis-vertical')) {

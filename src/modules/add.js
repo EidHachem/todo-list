@@ -1,6 +1,7 @@
 /* eslint-disable import/no-duplicates */
 /* eslint-disable no-unused-vars */
 /* eslint-disable consistent-return */
+/* eslint-disable no-restricted-syntax */
 
 import { tasks } from './edit';
 
@@ -42,4 +43,23 @@ form.addEventListener('submit', (e) => {
   createTask(newTask);
 
   taskValue.value = '';
+});
+
+const updateText = (index, newText) => {
+  for (const task of tasks) {
+    if (task.index === +index) {
+      task.description = newText;
+    }
+  }
+  localStorage.setItem('savedData', JSON.stringify(tasks));
+};
+
+const textareaSelector = document.querySelectorAll('.user-input');
+
+textareaSelector.forEach((textarea) => {
+  textarea.addEventListener('focusout', (e) => {
+    if (e.target.value) {
+      updateText(e.target.previousElementSibling.id, e.target.value);
+    }
+  });
 });
