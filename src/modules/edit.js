@@ -1,3 +1,8 @@
+/* eslint-disable prefer-const */
+/* eslint-disable import/no-mutable-exports */
+/* eslint-disable no-else-return */
+/* eslint-disable no-useless-return */
+
 let x = JSON.parse(localStorage.getItem('savedData'));
 export let tasks = [];
 
@@ -12,10 +17,7 @@ export default function edit(e) {
     const removeParent = item.parentElement.parentElement;
     removeParent.remove();
 
-    const removeTaskFromArray =
-      item.parentElement.previousElementSibling.children[0].getAttribute(
-        'name'
-      );
+    const removeTaskFromArray = item.parentElement.previousElementSibling.children[0].getAttribute('name');
 
     tasks = tasks
       .sort((a, b) => {
@@ -35,7 +37,6 @@ export default function edit(e) {
       });
 
     localStorage.setItem('savedData', JSON.stringify(tasks));
-    console.log(tasks);
   }
 
   if (item.classList.contains('fa-ellipsis-vertical')) {

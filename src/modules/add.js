@@ -1,5 +1,9 @@
-import edit from './edit';
+/* eslint-disable import/no-duplicates*/
+/* eslint-disable no-unused-vars */
+/* eslint-disable consistent-return */
+
 import { tasks } from './edit';
+
 const list = document.querySelector('.li');
 const form = document.querySelector('form');
 
