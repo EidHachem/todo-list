@@ -73,10 +73,14 @@ function edit(e) {
         }
       })
       .sort((task, newTask) => {
-        if (task.index !== newTask.index + 1) {
-          newTask.index -= 1;
-          return task.index - newTask.index;
+        if (task.index + 1 === newTask.index) {
+          return;
+        } else {
+          newTask.index = task.index + 1;
         }
+      })
+      .sort((a, b) => {
+        return a.index - b.index;
       });
 
     localStorage.setItem('savedData', JSON.stringify(tasks));
