@@ -90,3 +90,26 @@ form {
 .clear:hover {
   text-decoration: underline;
 }
+
+.fa-trash-can {
+  display: none;
+}
+
+.line-through {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+.hide-lists {
+  display: none;
+}
+
+.user-input {
+  border: none;
+  width: 30em;
+  height: 1em;
+  resize: none;
+  outline: none;
+  font-size: 0.9rem;
+  overflow: hidden;
+}

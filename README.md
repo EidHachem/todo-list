@@ -17,7 +17,7 @@
 
 ### Prerequisites
 
-- Have completed all the previous learning of modules.
+- Have some knowledge in node npm and webpack
 
 ## Set up
 
@@ -51,3 +51,29 @@ Give a ⭐️ if you like this project!
 ## 📝 License
 
 This project is [MIT](./MIT.md) licensed.
+
+const createTask =
+// const addTask = tasks.sort((task1, task2) => {
+// return task1.index - task2.index;
+// })
+// .map((task) => {
+// const listItem = document.createElement('li');
+// list.appendChild(listItem);
+// listItem.innerHTML = ` // <div class="input-label"><input type="checkbox" name="${task.index}" id="${task.index}"> // <label for="${task.index}">${task.description}</label></div> <div class="icon"><i class="fa-solid fa-ellipsis-vertical"></i></div><br>`;
+// });
+
+clear.addEventListener('click', (e) => {
+list.remove();
+});
+
+JSON.parse(localStorage.getItem('todoList')) ||
+
+localStorage.setItem('todoList', JSON.stringify(tasks.listItem));
+console.log(listItem);
+
+// function openEditor() {
+// const editIcon = document.querySelector('.edit-icon');
+// const ellipsis = document.querySelector('fa-ellipsis-vertical');
+// ellipsis.style.display = 'none';
+// editIcon.style.display = 'block';
+// }
