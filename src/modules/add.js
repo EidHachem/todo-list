@@ -1,9 +1,4 @@
-/* eslint-disable import/no-duplicates */
-/* eslint-disable no-unused-vars */
-/* eslint-disable consistent-return */
-/* eslint-disable no-restricted-syntax */
-
-import { tasks } from './edit';
+import { tasks } from './edit.js';
 
 const list = document.querySelector('.li');
 const form = document.querySelector('form');
@@ -19,7 +14,7 @@ export function createTask({ description, completed, index }) {
   list.appendChild(listItem);
 
   listItem.innerHTML = `
-  <div class="input-label"><input type="checkbox" name="${index}" id="${index}" class="id">
+  <div class="input-label"><input type="checkbox" name="${index}" id="${index}" class="id ${completed}">
   <textarea class="user-input" for="${index}" readonly>${description}</textarea></div>
   <div class="icon"><i class="fa-solid fa-ellipsis-vertical"></i><i class="fa-solid fa-trash-can"></i></div><br>`;
 }
@@ -46,11 +41,16 @@ form.addEventListener('submit', (e) => {
 });
 
 const updateText = (index, newText) => {
-  for (const task of tasks) {
+  tasks.forEach((task) => {
     if (task.index === +index) {
       task.description = newText;
     }
-  }
+  });
+  // for (const task of tasks) {
+  //   if (task.index === +index) {
+  //     task.description = newText;
+  //   }
+  // }
   localStorage.setItem('savedData', JSON.stringify(tasks));
 };
 

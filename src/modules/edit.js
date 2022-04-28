@@ -1,12 +1,4 @@
-/* eslint-disable prefer-const */
-/* eslint-disable import/no-mutable-exports */
-/* eslint-disable no-else-return */
-/* eslint-disable no-useless-return */
-/* eslint-disable array-callback-return */
-/* eslint-disable consistent-return */
-/* eslint-disable arrow-body-style */
-
-let x = JSON.parse(localStorage.getItem('savedData'));
+const x = JSON.parse(localStorage.getItem('savedData'));
 export let tasks = [];
 
 if (x) {
@@ -22,28 +14,15 @@ export default function edit(e) {
 
     const removeTaskFromArray = item.parentElement.previousElementSibling.children[0].getAttribute('name');
 
-    tasks = tasks
-      .filter((newTask) => {
-        if (newTask.index !== +removeTaskFromArray) {
-          return true;
-        }
-      })
-      .sort((a, b) => {
-        if (a.index !== 1) {
-          a.index = 1;
-        }
-        return a.index - b.index;
-      })
-      .sort((task, newTask) => {
-        if (task.index + 1 === newTask.index) {
-          return;
-        } else {
-          newTask.index = task.index + 1;
-        }
-      });
+    tasks = tasks.filter((newTask) => {
+      if (newTask.index !== +removeTaskFromArray) return true;
+    });
+
+    tasks.forEach((item, i) => {
+      item.index = i + 1;
+    });
 
     localStorage.setItem('savedData', JSON.stringify(tasks));
-    console.log(tasks);
   }
 
   if (item.classList.contains('fa-ellipsis-vertical')) {
