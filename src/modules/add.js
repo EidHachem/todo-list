@@ -38,6 +38,7 @@ form.addEventListener('submit', (e) => {
   createTask(newTask);
 
   taskValue.value = '';
+  return false;
 });
 
 const updateText = (index, newText) => {

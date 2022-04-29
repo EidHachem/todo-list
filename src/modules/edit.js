@@ -1,3 +1,4 @@
+/* eslint-disable import/no-mutable-exports */
 const x = JSON.parse(localStorage.getItem('savedData'));
 export let tasks = [];
 
@@ -16,6 +17,7 @@ export default function edit(e) {
 
     tasks = tasks.filter((newTask) => {
       if (newTask.index !== +removeTaskFromArray) return true;
+       return false;
     });
 
     tasks.forEach((item, i) => {
