@@ -28,10 +28,6 @@ export default function edit(e) {
     item.style.display = 'none';
   }
 
-  // if (item.classList.contains('id')) {
-  //   item.nextElementSibling.classList.add('line-through');
-  // }
-
   if (item.classList.contains('user-input')) {
     item.removeAttribute('readonly');
   }

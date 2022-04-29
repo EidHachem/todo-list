@@ -89,14 +89,8 @@ document.addEventListener('DOMContentLoaded', () => {
       if (+checkbox[i].id === task.index) {
         if (task.completed === true) {
           checkbox[i].checked = true;
-          // textareaSelector.forEach((textarea) => {
-          //   textarea.style.textDecoration = 'line-through';
-          // });
         } else {
           checkbox[i].checked = false;
-          // textareaSelector.forEach((textarea) => {
-          //   textarea.style.textDecoration = 'none';
-          // });
         }
       }
     });
