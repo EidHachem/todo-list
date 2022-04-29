@@ -20,10 +20,6 @@ export default function edit(e) {
       return false;
     });
 
-    tasks.forEach((item, i) => {
-      item.index = i + 1;
-    });
-
     localStorage.setItem('savedData', JSON.stringify(tasks));
   }
 
@@ -32,11 +28,29 @@ export default function edit(e) {
     item.style.display = 'none';
   }
 
-  if (item.classList.contains('id')) {
-    item.nextElementSibling.classList.toggle('line-through');
-  }
+  // if (item.classList.contains('id')) {
+  //   item.nextElementSibling.classList.add('line-through');
+  // }
 
   if (item.classList.contains('user-input')) {
     item.removeAttribute('readonly');
   }
 }
+
+const clearCompleted = document.querySelector('.clear');
+
+clearCompleted.addEventListener('click', () => {
+  tasks = tasks.filter((task) => {
+    if (task.completed !== true) {
+      return true;
+    }
+    return false;
+  });
+  localStorage.setItem('savedData', JSON.stringify(tasks));
+  window.location.reload(true);
+  return false;
+});
+
+tasks.forEach((item, i) => {
+  item.index = i + 1;
+});
