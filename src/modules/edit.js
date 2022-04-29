@@ -17,7 +17,7 @@ export default function edit(e) {
 
     tasks = tasks.filter((newTask) => {
       if (newTask.index !== +removeTaskFromArray) return true;
-       return false;
+      return false;
     });
 
     tasks.forEach((item, i) => {
