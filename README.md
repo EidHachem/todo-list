@@ -2,7 +2,7 @@
 
 > Description of the project.
 
-- In this project, I built a basic website that shows list of things I have to do today
+- In this project, I built a basic todo list organizer
 
 ## Built With
 
@@ -17,7 +17,7 @@
 
 ### Prerequisites
 
-- Have completed all the previous learning of modules.
+- Have some knowledge in node npm and webpack
 
 ## Set up
 
