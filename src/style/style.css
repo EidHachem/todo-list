@@ -113,3 +113,8 @@ form {
   font-size: 0.9rem;
   overflow: hidden;
 }
+
+[type='checkbox']:checked + textarea {
+  opacity: 0.5;
+  text-decoration: line-through;
+}

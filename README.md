@@ -1,8 +1,6 @@
 # ToDo list
 
-> Description of the project.
-
-- In this project, I built a basic todo list organizer
+- In this project, I built a basic todo list organizer that gives the user the ability to add new todos, check done todos and clear checked ones.
 
 ## Built With
 
@@ -13,7 +11,7 @@
 
 ## Live Demo (if available)
 
-- Not available
+- Not available yet
 
 ### Prerequisites
 
