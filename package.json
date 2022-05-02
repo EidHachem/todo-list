@@ -8,7 +8,8 @@
     "watch": "webpack --watch",
     "start": "webpack serve",
     "server": "node server.js",
-    "build": "webpack"
+    "build": "webpack",
+    "deploy": "gh-pages -d dist"
   },
   "keywords": [],
   "author": "",
@@ -41,5 +42,8 @@
   "bugs": {
     "url": "https://github.com/EidHachem/todo-list/issues"
   },
-  "homepage": "https://github.com/EidHachem/todo-list#readme"
+  "homepage": "https://github.com/EidHachem/todo-list#readme",
+  "dependencies": {
+    "gh-pages": "^3.2.3"
+  }
 }
