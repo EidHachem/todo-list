@@ -13,10 +13,7 @@ export default function edit(e) {
     const removeParent = item.parentElement.parentElement;
     removeParent.remove();
 
-    const removeTaskFromArray =
-      item.parentElement.previousElementSibling.children[0].getAttribute(
-        'name'
-      );
+    const removeTaskFromArray = item.parentElement.previousElementSibling.children[0].getAttribute('name');
 
     tasks = tasks.filter((newTask) => {
       if (newTask.index !== +removeTaskFromArray) return true;
