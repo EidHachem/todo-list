@@ -7,7 +7,7 @@ const json5 = require('json5');
 module.exports = {
   mode: 'development',
   entry: {
-    path: path.resolve(__dirname, './src/index.js'),
+    path: path.resolve(__dirname, './index.js'),
   },
   devServer: {
     static: {

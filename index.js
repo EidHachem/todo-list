@@ -1,4 +1,4 @@
-import './style/style.css';
+import './style.css';
 import { addTask, createTask } from './modules/add.js';
 import edit from './modules/edit.js';
 
