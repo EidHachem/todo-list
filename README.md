@@ -11,7 +11,7 @@
 
 ## Live Demo (if available)
 
-- Click to see the live demo: [Open] (https://eidhachem.github.io/todo-list/)
+- [Open](https://eidhachem.github.io/todo-list/)
 
 ### Prerequisites
 
